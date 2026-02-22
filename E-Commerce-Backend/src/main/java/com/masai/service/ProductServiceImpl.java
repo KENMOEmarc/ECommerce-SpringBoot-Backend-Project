@@ -45,14 +45,12 @@ public class ProductServiceImpl implements ProductService {
 			product.setSeller(seller);
 
 			prod = prodDao.save(product);
-			;
 
 			seller.getProduct().add(product);
 			sDao.save(seller);
 
 		} else {
 			prod = prodDao.save(product);
-			;
 		}
 
 		return prod;
